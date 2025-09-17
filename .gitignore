@@ -11,11 +11,6 @@ cmake_install.cmake
 install_manifest.txt
 Testing/
 
-# 编译生成的可执行文件（根据你的项目名称调整，如 vision-2024）
-vision-2024
-*.exe
-*.out
-
 # 日志文件
 *.log
 
