@@ -1,7 +1,7 @@
-/home/ganl1r/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/ganl1r/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/ganl1r/下载/vision-2024/vision-2024 -B /home/ganl1r/下载/vision-2024/vision-2024/cmake-build-debug
+/home/ganl1r/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/ganl1r/git/srm/vision-2024 -B /home/ganl1r/git/srm/vision-2024/cmake-build-debug
 Configuring common module...
 Configuring coord module...
 Configuring coord module...
--- Configuring done (0.1s)
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/ganl1r/下载/vision-2024/vision-2024/cmake-build-debug
+-- Build files have been written to: /home/ganl1r/git/srm/vision-2024/cmake-build-debug

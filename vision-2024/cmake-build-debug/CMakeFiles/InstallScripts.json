@@ -1,10 +1,10 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/ganl1r/\u4e0b\u8f7d/vision-2024/vision-2024/cmake-build-debug/cmake_install.cmake",
-		"/home/ganl1r/\u4e0b\u8f7d/vision-2024/vision-2024/cmake-build-debug/modules/common/cmake_install.cmake",
-		"/home/ganl1r/\u4e0b\u8f7d/vision-2024/vision-2024/cmake-build-debug/modules/autoaim/cmake_install.cmake",
-		"/home/ganl1r/\u4e0b\u8f7d/vision-2024/vision-2024/cmake-build-debug/modules/core/cmake_install.cmake"
+		"/home/ganl1r/git/srm/vision-2024/cmake-build-debug/cmake_install.cmake",
+		"/home/ganl1r/git/srm/vision-2024/cmake-build-debug/modules/common/cmake_install.cmake",
+		"/home/ganl1r/git/srm/vision-2024/cmake-build-debug/modules/autoaim/cmake_install.cmake",
+		"/home/ganl1r/git/srm/vision-2024/cmake-build-debug/modules/core/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

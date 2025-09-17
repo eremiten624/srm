@@ -1,4 +1,4 @@
-# Install script for directory: /home/ganl1r/下载/vision-2024/vision-2024/modules/core
+# Install script for directory: /home/ganl1r/git/srm/vision-2024/modules/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ganl1r/下载/vision-2024/vision-2024/cmake-build-debug/modules/core/install_local_manifest.txt"
+  file(WRITE "/home/ganl1r/git/srm/vision-2024/cmake-build-debug/modules/core/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
