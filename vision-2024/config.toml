@@ -1,0 +1,150 @@
+# 语法文档：https://toml.io/cn/
+
+fps_limit = 100.0     # 运行帧率 实数
+mode = "normal"       # 机器人运行模式 normal | auto
+type = "standard_3"   # 机器人类型 hero | standard | sentry，以后将这个改为编号和类型分开
+control = true       # 是否连接控制程序 true | false
+video.reader = "file" # 视频读取方式 file | camera
+video.writer = false  # 是否录制 true | false
+viewer.type = "web"   # 视图查看方式 web | local
+
+[message.simulator] # control为false时启用，能实时更新
+yaw = 1.0         # 陀螺仪水平角度，方向向右，单位为弧度
+pitch = 0.0       # 陀螺仪竖直角度，方向向上，单位为弧度
+roll = 0.0        # 陀螺仪滚转角度，方向向右，单位为弧度
+bullet_speed = 30.0 # 弹速
+mode = 0          # 自瞄模式 0(装甲板) | 1(小能量机关) | 2(大能量机关)
+color = 0         # 自身颜色 0(蓝色) | 1(红色) | 2(灰色) | 3(紫色)
+
+[autoaim]
+latitude = 31.31                    # 当地经纬度
+atm = 1002.0                        # 气压，单位hPa
+temperature = 25.0                  # 气温，单位摄氏度
+big_ball = [0.275, 0.0425, 0.041]   # 大弹丸参数：空气阻力系数，直径，质量
+small_ball = [0.47, 0.0168, 0.0032] # 小弹丸参数：空气阻力系数，直径，质量
+target color = 0                    # 目标颜色 0(蓝色) | 1(红色) | 2(灰色) | 3(紫色)
+
+[video.standard_3.file]
+camera = "HV_DA1465118"
+video = "../assets/armor/3.mp4"
+
+[coord.hero_1]
+cam_flip = true                      # 相机是否倒装
+ea_cam_imu = [0.0, 0.0, 0.0]         # 相机相对陀螺仪平面的欧拉角；方向：右, 上, 右；单位：度
+ea_muzzle_imu = [0.0, 0.0, 0.0]      # 枪口相对陀螺仪平面的欧拉角；方向：右, 上, 右；单位：度
+ctv_cam_imu = [+12.55, -47.5, 93.21] # 相机相对陀螺仪的位移；方向：右, 下, 前；单位：mm
+ctv_muzzle_imu = [0.0, +37.1, +60.0] # 枪口相对陀螺仪的位移；方向：右, 下, 前；单位：mm
+ctv_imu_world = [0.0, 0.0, 0.0]      # 陀螺仪相对世界坐标原点的位移；方向：右, 下, 前；单位：mm
+
+[coord.standard_3]
+cam_flip = true                      # 相机是否倒装
+ea_cam_imu = [0.0, 0.0, 0.0]         # 相机相对陀螺仪平面的欧拉角；方向：右, 上, 右；单位：度
+ea_muzzle_imu = [0.0, -2.0, 0.0]     # 枪口相对陀螺仪平面的欧拉角；方向：右, 上, 右；单位：度
+ctv_cam_imu = [0.0, -4.95, +109.65]  # 相机相对陀螺仪的位移；方向：右, 下, 前；单位：mm
+ctv_muzzle_imu = [0.0, +37.1, +60.0] # 枪口相对陀螺仪的位移；方向：右, 下, 前；单位：mm
+ctv_imu_world = [0.0, 0.0, 0.0]      # 陀螺仪相对世界坐标原点的位移；方向：右, 下, 前；单位：mm
+
+[video.hero_1.camera]
+hardware_trigger = true
+frame_rate = 120.0
+camera = "HV_00D27551308"
+
+[video.standard_3.camera]
+hardware_trigger = false
+frame_rate = 120.0
+camera = "HV_DA1465118"
+
+[video.cameras.HV_00D27551308]
+sn = "00D27551308"
+type = "HikCamera"
+exposure_time = 10000
+gain_value = 14.0
+time_stamp_ns = 10
+intrinsic_mat = [
+    "opencv-matrix",
+    { rows = 3, cols = 3, data = [
+        3.2527350218489082e+03,
+        0.0,
+        7.6817341164086611e+02,
+        0.0,
+        3.2458448096239727e+03,
+        6.0064558646004309e+02,
+        0.0,
+        0.0,
+        1.0,
+    ] },
+]
+distortion_mat = [
+    "opencv-matrix",
+    { rows = 1, cols = 5, data = [
+        -3.4585363968156907e-01,
+        5.6064538865454094e-02,
+        -2.3319545162859101e-03,
+        3.1142566944053842e-04,
+        0.0,
+    ] },
+]
+
+[video.cameras.HV_DA1465118]
+sn = "DA1465118"
+type = "HikCamera"
+exposure_time = 10000
+gain_value = 14.0
+time_stamp_ns = 10
+intrinsic_mat = [
+    "opencv-matrix",
+    { rows = 3, cols = 3, data = [
+        1.7766199808985457e+03,
+        0.0,
+        7.1950000000000000e+02,
+        0.0,
+        1.7766199808985457e+03,
+        5.3950000000000000e+02,
+        0.0,
+        0.0,
+        1,
+    ] },
+]
+distortion_mat = [
+    "opencv-matrix",
+    { rows = 1, cols = 5, data = [
+        -8.9517162242030060e-02,
+        2.9773763262799735e-01,
+        0.0,
+        0.0,
+        -6.0821091872525390e-01,
+    ] },
+]
+
+[viewer.web]
+shm_name.armor = "srm_viewer_web_armor" # 共享内存名字
+shm_name.bigrune = "srm_viewer_web_bigrune" # 共享内存名字
+shm_size = 0x100000         # 共享内存大小
+armor = 9003                 # 网页端口
+bigrune = 9003                 # 网页端口
+
+[message.control]
+shm_name = "srm_vision_control" # 共享内存名字
+shm_size = 0x10000              # 共享内存大小
+read_sem = 1002                 # 读信号量
+write_sem = 1001                # 写信号量
+
+[message.control.receive]
+gimbal = 1
+shoot = 2
+
+[message.control.send]
+gimbal = 1
+shoot = 2
+
+[nn.yolo.armor]
+coreml = "../assets/models/small_ball.mlmodelc"
+tensorrt = "../assets/models/armor.onnx"
+class_num = 1
+point_num = 0
+
+[nn.yolo.rune]
+coreml = "../assets/models/rune.mlmodelc"
+tensorrt = "../assets/models/rune.onnx"
+class_num = 4
+point_num = 5
