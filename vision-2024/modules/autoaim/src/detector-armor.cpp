@@ -23,6 +23,11 @@ bool ArmorDetector::Initialize() {
 
 bool ArmorDetector::Run(cv::Mat REF_IN image, ArmorPtrList REF_OUT armor_list) const {
   ///请补全
+  std::vector<cv::Rect> detections;
+  std::vector<cv::Point2f> points;
+  std::vector<float> confidences;
+
+
   return true;
 }
 
