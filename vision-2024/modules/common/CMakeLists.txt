@@ -2,7 +2,7 @@ set(LIB srm_common)
 message("Configuring common module...")
 
 find_package(OpenCV 4 REQUIRED QUIET)
-find_package(glog REQUIRED QUIET)
+find_package(Glog REQUIRED QUIET)
 find_package(Eigen3 REQUIRED QUIET)
 
 add_library(${LIB} INTERFACE)
